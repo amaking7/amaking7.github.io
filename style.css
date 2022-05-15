@@ -1,0 +1,167 @@
+/* 
+CSS rules for specific families
+font-family: 'DM Mono', monospace;
+font-family: 'DM Sans', sans-serif;
+*/
+
+:root {
+  --hero-background: #f7f9fc;
+  --callout-background: #f8f8f8;
+  --bluegreen-100: #f4fcfb;
+  --bluegreen-200: #e0f6f3;
+  --bluegreen-300: #c1ede8;
+  --bluegreen-400: #99e1d9;
+  --bluegreen-500: #123f39;
+  --bluegreen-600: #0f1615;
+  --berry-100: #f6e9ef;
+  --berry-200: #e5bdd0;
+  --berry-300: #d491b1;
+  --berry-400: #aa2463;
+  --berry-500: #440e27;
+  --berry-600: #220713;
+  --blue-100: #f0f5fb;
+  --blue-200: #dae6f4;
+  --blue-300: #c4d7ee;
+  --blue-400: #98b9e1;
+  --blue-500: #183354;
+  --blue-600: #0c192a;
+  --gray-100: #f0f0f0;
+  --gray-200: #c5c5c5;
+  --gray-300: #999999;
+  --gray-400: #707070;
+  --gray-500: #333333;
+  --gray-600: #282828;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--gray-500);
+  background-color: var(--blue-100);
+}
+
+h1 {
+  font-family: "DM Mono", monospace;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.035em;
+}
+
+p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  padding: 16px 24px;
+  background-color: var(--berry-400);
+  border-radius: 8px;
+  transition: ease-in-out 200ms;
+}
+
+a:hover {
+  color: #fff;
+  background-color: var(--berry-500);
+}
+
+/*Page border*/
+#top,
+#bottom,
+#left,
+#right {
+  background: var(--blue-400);
+  position: fixed;
+}
+#left,
+#right {
+  top: 0;
+  bottom: 0;
+  width: 16px;
+}
+#left {
+  left: 0;
+}
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+#top {
+  top: 0;
+}
+#bottom {
+  bottom: 0;
+}
+
+.content-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  max-width: 600px;
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.body-content {
+  margin-bottom: 56px;
+}
+
+/*Styles for sm and xs breakpoints*/
+
+@media (max-width: 768px) {
+  /*
+    Remove page borders
+    
+      #top,
+    #bottom,
+    #left,
+    #right {
+        display: none;
+    }
+  */
+
+  #left,
+  #right {
+    width: 12px;
+  }
+
+  #top,
+  #bottom {
+    height: 12px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .body-content {
+    margin-bottom: 48px;
+  }
+}
